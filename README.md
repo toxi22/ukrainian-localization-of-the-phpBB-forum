@@ -1,5 +1,5 @@
 # ukrainian-localization-of-the-phpBB-forum
-Українська локалізація форуму phpBB
+Українська локалізація форуму phpBB (для версії 3.3.8)
 
 
 Скопіювати файли у каталог: <root>/language/uk
