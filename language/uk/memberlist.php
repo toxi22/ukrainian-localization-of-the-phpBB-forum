@@ -2,6 +2,8 @@
 /**
 *
 * This file is part of the phpBB Forum Software package.
+* Modified and maintained by @toxi (Roman Pavlovskyi).
+* @copyright (c) 2026 @toxi (Roman Pavlovskyi).
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -134,5 +136,5 @@ $lang = array_merge($lang, [
 	'VIEW_SKYPE_PROFILE'	=> 'Перегляд профілю Skype',
 	'VIEW_TWITTER_PROFILE'	=> 'Перегляд профілю Twitter',
 	'VIEW_YOUTUBE_CHANNEL'	=> 'Перегляд профілю YouTube',
-	'VIEW_GOOGLEPLUS_PROFILE' => 'Перегляд профілю Google+',
+	'VIEW_YOUTUBE_PROFILE'	=> 'Перегляд профілю YouTube',
 ]);

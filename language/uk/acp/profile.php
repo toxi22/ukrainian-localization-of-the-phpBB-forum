@@ -93,7 +93,6 @@ $lang = array_merge($lang, [
 	'FIELD_DESCRIPTION'			=> 'Опис поля',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Пояснення, яке буде показане користувачу, для цього поля профілю.',
 	'FIELD_DROPDOWN'			=> 'Випадаючий список',
- 	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Ідентифікатор поля',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Обраний ідентифікатор поля уже існує. Оберіть, будь ласка, іншу назву.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Ідентифікатор поля - назва для ідентифікації поля профілю в базі даних та шаблонах.',

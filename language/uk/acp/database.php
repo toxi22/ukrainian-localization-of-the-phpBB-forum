@@ -66,6 +66,5 @@ $lang = array_merge($lang, [
 	'START_RESTORE'	=> 'Розпочати відновлення з резервної копії',
 	'STORE_AND_DOWNLOAD'	=> 'Зберегти та завантажити',
 	'STORE_LOCAL'	=> 'Зберегти файл локально',
-	'STRUCTURE_ONLY'	=> 'Лише структуру',
 	'TABLE_SELECT'	=> 'Вибір таблиць',
 ]);

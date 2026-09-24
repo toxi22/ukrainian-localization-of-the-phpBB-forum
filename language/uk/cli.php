@@ -35,7 +35,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, [
-	'CLI_APCU_CACHE_NOTICE'				=> 'Кеш APCu повинен бути очищений через Адміністраторський розділ.',
+	'CLI_APCU_CACHE_NOTICE'				=> 'Кеш APCu потрібно очистити через Панель Адміністратора.',
 	'CLI_CONFIG_CANNOT_CACHED'			=> 'Увімкніть цю опцію, якщо значення параметра конфігурації змінюється занадто часто, для її кешування.',
 	'CLI_CONFIG_CURRENT'				=> 'Поточне значення параметру конфігурації. Використовуйте 0 і 1, щоб задавати значення логічного типу (boolean)',
 	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Успішно видалено параметр конфігурації %s.',
@@ -71,6 +71,7 @@ $lang = array_merge($lang, [
 	'CLI_DESCRIPTION_REPARSER_REPARSE'					=> 'Здійснює репарсинг збереженого тексту за допомогою поточних сервісів text_formatter.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'			=> 'Тип тексту для репарсингу. Залиште поле порожнім для репарсингу всіх типів.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Не зберігати будь-які зміни; тільки вивести передбачуваний результат',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_FORCE_BBCODE'	=> 'Обробити всі BBCode без винятку. Зверніть увагу, що будь-які раніше вимкнені BBCode будуть повторно оброблені, увімкнені та повністю відображені.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Найменше значення ідентифікатора запису для обробки',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Найвище значення ідентифікатора запису для обробки',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Приблизна кількість записів для обробки за одиницю часу',
@@ -104,6 +105,8 @@ $lang = array_merge($lang, [
 	'CLI_DESCRIPTION_USER_ADD_OPTION_NOTIFY'	=> 'Відправити лист активації новому користувачу (за замовчуванням не відправляється)',
 	'CLI_DESCRIPTION_USER_DELETE'				=> 'Видалити бліковий запис користувача.',
 	'CLI_DESCRIPTION_USER_DELETE_USERNAME'		=> 'Ім\'я користувача для видалення',
+	'CLI_DESCRIPTION_USER_DELETE_ID'			=> 'Видалити облікові записи користувачів за ідентифікатором.',
+	'CLI_DESCRIPTION_USER_DELETE_ID_OPTION_ID'	=> 'Ідентифікатори користувачів, яких потрібно видалити',
 	'CLI_DESCRIPTION_USER_DELETE_OPTION_POSTS'	=> 'Видалити усі повідомлення користувача. Без цієї опції повідомлення користувача не буде видалено.',
 	'CLI_DESCRIPTION_USER_RECLEAN'				=> 'Відновити видалені імена користувачів.',
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Не вдалося вимкнути розширення %s',
@@ -152,6 +155,10 @@ $lang = array_merge($lang, [
 
 	'CLI_USER_ADD_SUCCESS'		=> 'Успішно додано користувача %s.',
 	'CLI_USER_DELETE_CONFIRM'	=> 'Ви впевнені, що хочете видалити ‘%s’? [y/N]',
+	'CLI_USER_DELETE_ID_CONFIRM'	=> 'Ви впевнені, що хочете видалити користувачів з ідентифікатором ‘%s’? [y/N]',
+	'CLI_USER_DELETE_ID_SUCCESS'	=> 'Користувачів за вказаним ідентифікатором успішно видалено.',
+	'CLI_USER_DELETE_ID_START'		=> 'Видалення користувачів за вказаним ідентифікатором',
+	'CLI_USER_DELETE_NONE'			=> 'Жодного користувача не було видалено за вказаним ідентифікатором.',
 	'CLI_USER_RECLEAN_START'	=> 'Відновлення видалених користувачів',
 	'CLI_USER_RECLEAN_DONE'		=> [
 		0	=> 'Відновлення завершено. Немає видалених користувачів, які потрібно відновити.',

@@ -49,8 +49,6 @@ $lang = array_merge($lang, [
 	'BUMPED_BY'				=> 'Останній раз піднімалось %1$s на %2$s.',
 	'BUMP_TOPIC'			=> 'Підняти тему',
 
-	'CODE'					=> 'Код',
- 
 	'DELETE_TOPIC'			=> 'Видалити тему',
 	'DELETED_INFORMATION'	=> 'Видалено %2$s користувачем %1$s',
 	'DISAPPROVE'			=> 'Відхилити',
@@ -99,7 +97,6 @@ $lang = array_merge($lang, [
 
 	'QUICK_MOD'				=> 'Швидкі дії',
  	'QUICKREPLY'			 => 	'Швидка відповідь',
-	'QUOTE'					=> 'Цитата',
 
 	'REPLY_TO_TOPIC'		=> 'Відповісти',
 	'RESTORE'				=> 'Відновити',
@@ -116,6 +113,7 @@ $lang = array_merge($lang, [
 	'VIEW_INFO'				=> 'Інформація про повідомлення',
 	'VIEW_NEXT_TOPIC'		=> 'Наступна тема',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Попередня тема',
+	'VIEW_QUOTED_POST'		=> 'Переглянути цитовану публікацію',
 	'VIEW_RESULTS'			=> 'Переглянути результати',
 
 	'VIEW_TOPIC_POSTS'		=> array(

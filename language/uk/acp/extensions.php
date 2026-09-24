@@ -2,6 +2,8 @@
 /**
 *
 * This file is part of the phpBB Forum Software package.
+* Modified and maintained by @toxi (Roman Pavlovskyi).
+* @copyright (c) 2026 @toxi (Roman Pavlovskyi).
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -40,7 +42,10 @@ $lang = array_merge($lang, [
 	'EXTENSION_DIR_INVALID'		=> 'Вибране розширення має неправильну структуру каталогу і тому не може бути підключено.',
 	'EXTENSION_NOT_ENABLEABLE'	=> 'Вибране розширення не може бути увімкнено, перевірте вимоги до встановлення.',
 	'EXTENSION_NOT_INSTALLED'	=> 'Розширення %s не є доступним. Будь ласка, перевірте, що ви встановили його коректно.',
+	
 	'DETAILS'				=> 'Інформація',
+	
+	'EXTENSIONS_NOT_INSTALLED'	=> 'Розширення не встановлено',
 	'EXTENSIONS_DISABLED'  => 'Вимкнені розширення',
 	'EXTENSIONS_ENABLED'   => 'Увімкнуті розширення',
 	'EXTENSION_DELETE_DATA'  => 'Видалити дані',

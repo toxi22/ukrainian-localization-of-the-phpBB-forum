@@ -2,6 +2,8 @@
 /**
 *
 * This file is part of the phpBB Forum Software package.
+* Modified and maintained by @toxi (Roman Pavlovskyi).
+* @copyright (c) 2026 @toxi (Roman Pavlovskyi).
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -87,7 +89,22 @@ $lang = array_merge($lang, [
 		'URL'			=> 'Правильна адреса URL з використанням будь-якого дозволеного протоколу (http, ftp тощо не можуть використовуватись для деструктивних дій javascript). Якщо нічого не задано, буде автоматично додано префікс &quot;http://&quot;',
 		'LOCAL_URL'		=> 'Локальна адреса URL. URL-адреса повинна бути відносною до сторінки теми та не містити ім\'я серверу або протокол, як посилання, котрі починаються з “%s”',
 		'RELATIVE_URL'		=> 'Відносна адреса URL. Ви можете її використовувати для підставлення окремих частин адреси URL, але з обережністю: повна адреса URL є правильною відносною адресою URL. Якщо вам потрібно використати відносні адреси URL форуму, використовуйте LOCAL_URL.',
-		'COLOR'			=> 'Колір HTML. Може бути заданий в числовій формі  <samp>#FF1234</samp> або <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">ключовим словом кольору CSS</a>, наприклад <samp>fuchsia</samp> або <samp>InactiveBorder</samp>'
+		'COLOR'			=> 'Колір HTML. Може бути заданий в числовій формі  <samp>#FF1234</samp> або <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">ключовим словом кольору CSS</a>, наприклад <samp>fuchsia</samp> або <samp>InactiveBorder</samp>',
+
+		'ALNUM'			=> 'Символи латинського алфавіту (A-Z) та цифри.',
+		'CHOICE'		=> 'Вибір заданих значень, наприклад, <samp>{CHOICE=spades,hearts,diamonds,clubs}</samp>. Значення за замовчуванням не враховують регістр, і їх можна враховувати, вказавши опцію <samp>caseSensitive</samp> option: <samp>{CHOICE=Spades,Hearts,Diamonds,Clubs;caseSensitive}</samp>',
+		'FLOAT'			=> 'Десяткове значення, наприклад, <samp>0.5</samp>.',
+		'HASHMAP'		=> 'Зіставляє рядки з їх заміною у вигляді <samp>{HASHMAP=string1:replacement1,string2:replacement2}</samp>. Враховує регістр. Зберігає невідомі значення за замовчуванням.',
+		'INT'			=> 'Ціле значення, наприклад <samp>2</samp>.',
+		'IP'			=> 'Дійсна адреса IPv4 або IPv6.',
+		'IPPORT'		=> 'Дійсна адреса IPv4 або IPv6 з номером порту.',
+		'IPV4'			=> 'Дійсна адреса IPv4.',
+		'IPV6'			=> 'Дійсна адреса IPv6.',
+		'MAP'			=> 'Зіставляє рядки з їх заміною у формі <samp>{MAP=string1:replacement1,string2:replacement2}</samp>. Регістр не враховується. Зберігає невідомі значення за замовчуванням.',
+		'RANGE'			=> 'Приймає ціле число в заданому діапазоні, наприклад, <samp>{RANGE=-10,42}</samp>.',
+		'REGEXP'		=> 'Перевіряє своє значення відносно заданого регулярного виразу, наприклад, <samp>{REGEXP=/^foo\w+bar$/}</samp>.',
+		'TIMESTAMP'		=> 'Мітка часу, така як <samp>1h30m10s</samp>, яка буде перетворена на кількість секунд. Також приймає число.',
+		'UINT'			=> 'Ціле число без знака. Те саме, що й <samp>{INT}</samp>, але відхиляє значення менше 0.',
 	),
 ]);
 

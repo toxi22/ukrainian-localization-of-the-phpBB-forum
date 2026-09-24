@@ -2,6 +2,8 @@
 /**
 *
 * This file is part of the phpBB Forum Software package.
+* Modified and maintained by @toxi (Roman Pavlovskyi).
+* @copyright (c) 2026 @toxi (Roman Pavlovskyi).
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -49,7 +51,7 @@ $lang = array_merge($lang, [
 	'CONTINUE_INDEXING_EXPLAIN'				=> 'Процес індексування розпочато. Для доступу до сторінки індексування пошуку, вам необхідно дочекатись завершення процесу або відмінити його.',
 	'CREATE_INDEX'							=> 'Створити індекси',
 
-	'DEFAULT_SEARCH_RETURN_CHARS'			=> 'Максимальна кількість символів в повідомленнях',
+	'DEFAULT_SEARCH_RETURN_CHARS'			=> 'Кількість символів в результатах пошуку',
 	'DEFAULT_SEARCH_RETURN_CHARS_EXPLAIN'	=> 'Кількість символів, яким буде обмежений текст повідомлень в результатах пошуку. Введіть 0 для виведення повного тексту повідомлень.',
 	'DELETE_INDEX'							=> 'Видалити індекси',
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Видалення індексу в процесі',
@@ -133,6 +135,7 @@ $lang = array_merge($lang, [
 	),
 
 	'SEARCH_INDEX_CREATED'					=> 'Успішно проіндексовано усі повідомлення в базі даних форуму.',
+	'SEARCH_INDEX_PROGRESS'					=> 'Виконано: %1$d | Очікує на розгляд: %2$d | Всього: %3$d',
 	'SEARCH_INDEX_REMOVED'					=> 'Успішно видалено пошуковий індекс для цього механізму.',
 	'SEARCH_INTERVAL'						=> 'Інтервал між пошуковими запитами',
 	'SEARCH_INTERVAL_EXPLAIN'				=> 'Час в секундах, через який користувачі зможуть здійснювати наступний пошук. Цей інтервал перевіряється окремо для кожного користувача.',

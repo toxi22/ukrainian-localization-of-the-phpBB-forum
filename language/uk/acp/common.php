@@ -2,6 +2,8 @@
 /**
 *
 * This file is part of the phpBB Forum Software package.
+* Modified and maintained by @toxi (Roman Pavlovskyi).
+* @copyright (c) 2026 @toxi (Roman Pavlovskyi).
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -213,7 +215,7 @@ $lang = array_merge($lang, [
 	'CRON_NO_SUCH_TASK'		=> 'Не вдалося знайти задачу планувальника "%s".',
 	'CRON_NO_TASK'			=> 'В даний момент немає завдань планувальника для запуску.',
 	'CRON_NO_TASKS'			=> 'Не вдалося знайти завдання планувальника.',
-	'CSV_INVALID'			=> 'Розділений комами список «%1$s» має невірний формат. Роздільником значень в списку може бути тільки кома, роздільник не може перебувати на початку або в кінці списку.',
+	'CSV_INVALID'			=> 'Вказане роздалене комами налаштування “%1$s” не вірне. Значення повинні бути розділені лише комами, вони не повинні містити жодних початкових або кінцевих розділень.',
 	'CURRENT_VERSION'		=> 'Поточна версія',
 	'DEACTIVATE'	=> 'Деактивувати',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Введений шлях "%s" не існує.',
@@ -271,7 +273,7 @@ $lang = array_merge($lang, [
 	'SELECT_ANONYMOUS'	=> 'Обрати анонімного користувача',
 	'SELECT_OPTION'	=> 'Обрати',
 	'SETTING_TOO_LOW'      => 'Введене значення для налаштування “%1$s” занадто мале. Мінімально допустиме значення %d.',
-	'SETTING_TOO_BIG'      => 'Введене значення для налаштування “%1$s” занадто велике. Максимально допустиме значення %d.',
+	'SETTING_TOO_BIG'      => 'Введене значення для налаштування “%1$s” занадто велике. Максимально допустиме значення %d.',   
 	'SETTING_TOO_LONG'      => 'Введене значення для налаштування “%1$s” занадто довге. Максимально дозволена довжина %d.',
 	'SETTING_TOO_SHORT'      => 'Введене значення для налаштування “%1$s” занадто коротке. Мінімально дозволена довжина %d.',
  	'SHOW_ALL_OPERATIONS' => 'Показати усі дії',
@@ -280,7 +282,7 @@ $lang = array_merge($lang, [
 	'TOTAL_SIZE'   	=> 'Загальний розмір',
 	'UCP'	=> 'Панель керування',
 	'URL_INVALID'			=> 'Невірно вказана URL-адреса для налаштування “%1$s”.',
-	'URL_SCHEME_INVALID'	=> 'І\'мя протоколу «%2$s» в налаштуванні «%1$s» має невірний формат. Ім\'я протоколу має починатися з латинського символу і може містити тільки латинські символи, цифри, дефіси та крапки.',
+	'URL_SCHEME_INVALID'	=> 'Надана схема “%2$s” в налаштуванні “%1$s”, розділеному комами, невірна.  Ім\'я схеми має починатися з латинської букви і може містити тільки латинські букви, цифри, дефіси та крапки.',
 	'USERNAMES_EXPLAIN'	=> 'Вкажіть кожне ім\'я користувача з нової стрічки',
 	'USER_CONTROL_PANEL'	=> 'Панель керування',
 
@@ -327,12 +329,11 @@ $lang = array_merge($lang, [
 	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding налаштовано невірно',
 	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> 'Значення <var>mbstring.encoding_translation</var> повинне бути 0. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
 	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion налаштовано невірно',
-	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> 'Значення <var>mbstring.http_input</var> повинне бути <samp>pass</samp>. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> 'Значення <var>mbstring.http_input</var> повинне бути порожнім. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
 	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion налаштовано невірно',
-	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> 'Значення <var>mbstring.http_output</var> повинне бути <samp>pass</samp>. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
-	'ERROR_DEFAULT_CHARSET'							=> 'Кодування символів за замовчуванням налаштована невірно',
-	'ERROR_DEFAULT_CHARSET_EXPLAIN'					=> 'Параметр <var>default_charset</var> повинен дорівнювати <samp>UTF-8</samp>. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
-
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> 'Значення <var>mbstring.http_output</var> повинне бути порожнім. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',	
+	'ERROR_DEFAULT_CHARSET'							=> 'Кодування символів за замовчуванням невірно налаштоване',
+	'ERROR_DEFAULT_CHARSET_EXPLAIN'					=> 'Значення параметру <var>default_charset</var> повинне бути <samp>UTF-8</samp>. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
 
 	'FILES_PER_DAY'	=> 'Вкладень за день',
 	'FORUM_STATS'	=> 'Статистика форуму',
@@ -351,9 +352,9 @@ $lang = array_merge($lang, [
 	'PURGE_CACHE_CONFIRM'	=> 'Ви впевнені, що хочете очистити кеш?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Очищає усі пов\'язані з кешем елементи, включаючи кешовані файли шаблонів та запити.',
 	'PURGE_CACHE_SUCCESS'	=> 'Кеш успішно очищено.',
- 	'PURGE_SESSIONS' => 'Очистити усі сесії',
- 	'PURGE_SESSIONS_CONFIRM' => 'Ви впевнені, що хочете очистити усі поточні сесії? Це призведе до виходу усіх користувачів з форуму.',
- 	'PURGE_SESSIONS_EXPLAIN' => 'Очищення усіх сесій. Очищення таблиці сесій призведе до виходу усіх користувачів з форуму.',
+ 	'PURGE_SESSIONS' => 'Очистити усі сесії', 
+ 	'PURGE_SESSIONS_CONFIRM' => 'Ви впевнені, що хочете очистити усі поточні сесії? Це призведе до виходу усіх користувачів з форуму.', 
+ 	'PURGE_SESSIONS_EXPLAIN' => 'Очищення усіх сесій. Очищення таблиці сесій призведе до виходу усіх користувачів з форуму.',	
 	'PURGE_SESSIONS_SUCCESS'	=> 'Сесії успішно очищено.',
 	'RESET_DATE'	=> 'Скинути дату запуску форуму',
 	'RESET_DATE_CONFIRM'	=> 'Ви впевнені, що хочете скинути дату запуску форуму?',
@@ -417,20 +418,20 @@ $lang = array_merge($lang, [
 	'SORT_REG_DATE'	=> 'датою реєстрації',
  	'SORT_LAST_REMINDER' => 'Останнім нагадуванням',
  	'SORT_REMINDER' => 'Датою нагадування',
-
+ 	
 	'USER_IS_INACTIVE'	=> 'Учасник неактивний',
 ]);
 
- // Send statistics page
+ // Send statistics page 
 $lang = array_merge($lang, [
-	'EXPLAIN_SEND_STATISTICS' => 'Будьте ласкаві, надішліть нам інформацію про ваш сервер і конфігурацію phpBB для статистичного аналізу. Уся інформація, яка могла б ідентифікувати вас або ваш сайт, відсутня - дані повністю <strong>анонімні</strong>. Ґрунтуючись на наданій вами інформації, ми будемо приймати рішення про функціональність майбутніх версій phpBB. Статистичні дані будуть доступними публічно. Ми також використовуємо ці дані спільно з проектом PHP - мові програмування, на якій написано phpBB.',
- 	'EXPLAIN_SHOW_STATISTICS' => 'Використовуючи кнопку нижче, ви можете переглянути усі змінні, які буде передано.',
- 	'DONT_SEND_STATISTICS' => 'Повернутись на головну сторінку панелі адміністрування, якщо ви не бажаєте надсилати статистичну інформацію до phpBB.',
- 	'GO_ACP_MAIN' => 'Перейти на головну сторінку панелі адміністрування',
- 	'HIDE_STATISTICS' => 'Приховати подробиці',
- 	'SEND_STATISTICS' => 'Надіслати статистику',
- 	'SEND_STATISTICS_LONG' => 'Надіслати статистичну інформацію',
- 	'SHOW_STATISTICS' => 'Показати подробиці',
+	'EXPLAIN_SEND_STATISTICS' => 'Будьте ласкаві, надішліть нам інформацію про ваш сервер і конфігурацію phpBB для статистичного аналізу. Уся інформація, яка могла б ідентифікувати вас або ваш сайт, відсутня - дані повністю <strong>анонімні</strong>. Ґрунтуючись на наданій вами інформації, ми будемо приймати рішення про функціональність майбутніх версій phpBB. Статистичні дані будуть доступними публічно. Ми також використовуємо ці дані спільно з проектом PHP - мові програмування, на якій написано phpBB.', 
+ 	'EXPLAIN_SHOW_STATISTICS' => 'Використовуючи кнопку нижче, ви можете переглянути усі змінні, які буде передано.', 
+ 	'DONT_SEND_STATISTICS' => 'Повернутись на головну сторінку панелі адміністрування, якщо ви не бажаєте надсилати статистичну інформацію до phpBB.', 
+ 	'GO_ACP_MAIN' => 'Перейти на головну сторінку панелі адміністрування', 
+ 	'HIDE_STATISTICS' => 'Приховати подробиці', 
+ 	'SEND_STATISTICS' => 'Надіслати статистику', 
+ 	'SEND_STATISTICS_LONG' => 'Надіслати статистичну інформацію', 
+ 	'SHOW_STATISTICS' => 'Показати подробиці', 
  	'THANKS_SEND_STATISTICS' => 'Дякуємо за надану вами інформацію!',
 	'FAIL_SEND_STATISTICS'		=> 'phpBB не вдалось надіслати статистику',
 ]);
@@ -446,12 +447,12 @@ $lang = array_merge($lang, [
 	'LOG_ACL_ADD_GROUP_GLOBAL_A_'	=> '<strong>Додано або змінено права доступу адміністратора для групи</strong><br />» %s',
 	'LOG_ACL_ADD_ADMIN_GLOBAL_A_'	=> '<strong>Додано або змінено Адміністраторів</strong><br />» %s',
 	'LOG_ACL_ADD_MOD_GLOBAL_M_'	=> '<strong>Додано або змінено Супермодераторів</strong><br />» %s',
-	'LOG_ACL_ADD_USER_LOCAL_F_'	=> '<strong>Додано або змінено доступ користувачів до форуму</strong> з %1$s<br />» %2$s',
-	'LOG_ACL_ADD_USER_LOCAL_M_'	=> '<strong>Додано або змінено доступ модераторів до форуму</strong> з %1$s<br />» %2$s',
-	'LOG_ACL_ADD_GROUP_LOCAL_F_'	=> '<strong>Додано або змінено доступ груп до форуму</strong> з %1$s<br />» %2$s',
-	'LOG_ACL_ADD_GROUP_LOCAL_M_'	=> '<strong>Додано або змінено доступ модератора для групи до форуму</strong> з %1$s<br />» %2$s',
-	'LOG_ACL_ADD_MOD_LOCAL_M_'	=> '<strong>Додано або змінено Модераторів</strong> з %1$s<br />» %2$s',
-	'LOG_ACL_ADD_FORUM_LOCAL_F_'	=> '<strong>Додано або змінено права доступу до форуму</strong> з %1$s<br />» %2$s',
+	'LOG_ACL_ADD_USER_LOCAL_F_'	=> '<strong>Додано або змінено доступ користувачів до форуму</strong> до %1$s<br />» %2$s',
+	'LOG_ACL_ADD_USER_LOCAL_M_'	=> '<strong>Додано або змінено доступ модераторів до форуму</strong> до %1$s<br />» %2$s',
+	'LOG_ACL_ADD_GROUP_LOCAL_F_'	=> '<strong>Додано або змінено доступ груп до форуму</strong> до %1$s<br />» %2$s',
+	'LOG_ACL_ADD_GROUP_LOCAL_M_'	=> '<strong>Додано або змінено доступ модератора для групи до форуму</strong> до %1$s<br />» %2$s',
+	'LOG_ACL_ADD_MOD_LOCAL_M_'	=> '<strong>Додано або змінено Модераторів</strong> для %1$s<br />» %2$s',
+	'LOG_ACL_ADD_FORUM_LOCAL_F_'	=> '<strong>Додано або змінено права доступу до форуму</strong> для %1$s<br />» %2$s',
 	'LOG_ACL_DEL_ADMIN_GLOBAL_A_'	=> '<strong>Видалено Адміністраторів</strong><br />» %s',
 	'LOG_ACL_DEL_MOD_GLOBAL_M_'	=> '<strong>Видалено Супермодераторів</strong><br />» %s',
 	'LOG_ACL_DEL_MOD_LOCAL_M_'	=> '<strong>Видалено Модераторів</strong> з %1$s<br />» %2$s',
@@ -531,6 +532,7 @@ $lang = array_merge($lang, [
 	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Видалено в смітник тему “%1$s”, створену користувачем “%2$s”, відхилено з наступної причини</strong><br />» %3$s',
 	'LOG_SPLIT_DESTINATION'	=> '<strong>Переміщено розділені повідомлення</strong><br />» до %s',
 	'LOG_SPLIT_SOURCE'	=> '<strong>Розділено повідомлення</strong><br />» з %s',
+	
 	'LOG_TOPIC_APPROVED'	=> '<strong>Схвалено тему</strong><br />» %s',
 	'LOG_TOPIC_RESTORED'		=> '<strong>Відновлено тему</strong><br />» %s',
 	'LOG_TOPIC_DISAPPROVED'	=> '<strong>Тему “%1$s”, створену користувачем “%3$s” не схвалено з наступної причини</strong><br />%2$s',
@@ -538,6 +540,8 @@ $lang = array_merge($lang, [
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Змінено тип теми</strong><br />» %s',
 	'LOG_UNLOCK'	=> '<strong>Розблоковано тему</strong><br />» %s',
 	'LOG_UNLOCK_POST'	=> '<strong>Розблоковано повідомлення</strong><br />» %s',
+	'LOG_VERSION_CHECK_FAIL'	=> '<strong>Version check failed</strong>',
+	
 	'LOG_DISALLOW_ADD'	=> '<strong>Додано заборонене ім\'я</strong><br />» %s',
 	'LOG_DISALLOW_DELETE'	=> '<strong>Видалено заборонене ім\'я</strong>',
 	'LOG_DB_BACKUP'	=> '<strong>Резервне копіювання бази даних</strong>',
@@ -576,7 +580,7 @@ $lang = array_merge($lang, [
 	'LOG_USERS_ADDED'	=> '<strong>Додано нових учасників до групи</strong> %1$s<br />» %2$s',
 	'LOG_USERS_APPROVED' => '<strong>Схвалено кандидатів в групу </strong>%1$s<br />» %2$s',
  	'LOG_USERS_PENDING' => '<strong>Користувачі відіслали запит про вступ до групи “%1$s” і чекають схвалення</strong><br />» %2$s',
-
+ 
  	'LOG_IMAGE_GENERATION_ERROR' => '<strong>Помилка під час створення зображення</strong><br />» Помилка в %1$s у рядку %2$s: %3$s',
 
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Активовано неактивних користувачів</strong><br />» %s',
@@ -645,6 +649,10 @@ $lang = array_merge($lang, [
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Створено пошуковий індекс для</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Видалено пошуковий індекс для</strong><br />» %s',
 	'LOG_SPHINX_ERROR'			=> '<strong>Помилка Sphinx</strong><br />» %s',
+
+	'LOG_SPAMHAUS_OPEN_RESOLVER'		=> 'Spamhaus не дозволяє запити, використовуючи відкритий резольвер. Перевірку чорних списків було вимкнено. Для отримання додаткової інформації, перегляньте https://www.spamhaus.com/product/help-for-spamhaus-public-mirror-users/ .',
+	'LOG_SPAMHAUS_VOLUME_LIMIT'			=> 'Обмеження на обсяг запитів до Spamhaus перевищено. Перевірку чорних списків було вимкнено. Для отримання додаткової інформації, перегляньте https://www.spamhaus.com/product/help-for-spamhaus-public-mirror-users/ .',
+
 	'LOG_STYLE_ADD'	=> '<strong>Додано новий стиль</strong><br />» %s',
 	'LOG_STYLE_DELETE'	=> '<strong>Видалено стиль</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Змінено стиль</strong><br />» %s',
@@ -708,14 +716,14 @@ $lang = array_merge($lang, [
 	'LOG_USER_GROUP_JOIN'	=> '<strong>Користувач вступив до групи</strong><br />» %s',
 	'LOG_USER_GROUP_JOIN_PENDING'	=> '<strong>Користувач приєднався до групи і потребує схвалення</strong><br />» %s',
 	'LOG_USER_GROUP_RESIGN'	=> '<strong>Користувач відмовився від участі в групі</strong><br />» %s',
-
+ 	
  	'LOG_WARNING_DELETED' => '<strong>Видалено попередження у користувача </strong><br />» %s',
  	'LOG_WARNINGS_DELETED'		=> array(
  		1 => '<strong>Видалено попередження у користувача</strong><br />» %1$s',
  		2 => '<strong>Видалено %2$d попереджень у користувача</strong><br />» %1$s', // Example: '<strong>Deleted 2 user warnings</strong><br />» username'
  	),
- 	'LOG_WARNINGS_DELETED_ALL' => '<strong>Видалено усі попередження у користувача</strong><br />» %s',
-
+ 	'LOG_WARNINGS_DELETED_ALL' => '<strong>Видалено усі попередження у користувача</strong><br />» %s',	
+ 
 	'LOG_WORD_ADD'	=> '<strong>Додано цензор слів</strong><br />» %s',
 	'LOG_WORD_DELETE'	=> '<strong>Видалено цензор слів</strong><br />» %s',
 	'LOG_WORD_EDIT'	=> '<strong>Змінено цензор слів</strong><br />» %s',

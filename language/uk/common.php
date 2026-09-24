@@ -2,6 +2,8 @@
 /**
 *
 * This file is part of the phpBB Forum Software package.
+* Modified and maintained by @toxi (Roman Pavlovskyi).
+* @copyright (c) 2026 @toxi (Roman Pavlovskyi).
 *
 * @copyright (c) phpBB Limited <https://www.phpbb.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
@@ -41,14 +43,14 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, [
-	'TRANSLATION_INFO'	=> 'Український переклад &copy 2005-2020 <a class="copyright" target="_blank" href="https://phpbb.com.ua/">Українська підтримка phpBB</a>',
+	'TRANSLATION_INFO'	=> 'Український переклад &copy 2005-2023 <a class="copyright" target="_blank" href="https://phpbb.com.ua/">Українська підтримка phpBB</a>',
 	'DIRECTION'	=> 'ltr',
 	'DATE_FORMAT'	=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'	=> 'uk',
 
 	// You can define different rules for the determination of plural forms here.
-	// See https://area51.phpbb.com/docs/dev/32x/language/plurals.html for more information
+	// See https://area51.phpbb.com/docs/dev/3.3.x/language/plurals.html for more information
 	// or ask the translation manager for help.
 	'PLURAL_RULE'		=> 7,
 
@@ -95,7 +97,7 @@ $lang = array_merge($lang, [
 	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Невірний запис бази даних.',
 	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Обробника сервісу OAuth надано невірний тип сервісу.',
 	'AUTH_PROVIDER_OAUTH_ERROR_REQUEST'				=> 'Виникла помилка при обробці вашого запиту OAuth.',
-	'AUTH_PROVIDER_OAUTH_RETURN_ERROR'						=> 'Сервіс аутентифікації повернув невірну відповідь, тому запит не може бути оброблений.',
+	'AUTH_PROVIDER_OAUTH_RETURN_ERROR'						=> 'Зовнішній сервіс повернув невірне значення, тому ваш запит не може бути оброблено.',
 	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'Сервіс OAuth не створено',
 	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
 	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
@@ -111,8 +113,8 @@ $lang = array_merge($lang, [
 	'AVATAR_NOT_UPLOADED'	=> 'Не вдалось завантажити аватар.',
 	'AVATAR_NO_TEMP_DIR'			=> 'Папку для тимчасових файлів не знайдено або вона недоступна для запису.',
 	'AVATAR_NO_SIZE'	=> 'Неможливо визначити ширину або висоту віддаленого аватару, будь ласка, введіть їх вручну.',
-	'AVATAR_NO_UPLOAD_DIR'			=> 'Шлях до папки для завантаження аватарки не існує, або запис в зазначену папку не дозволений.',
-	'AVATAR_NO_UPLOAD_PATH'			=> 'Пряме завантаження аватарки дозволено, але шлях до папки для завантаження аватарки не заданий.',
+	'AVATAR_NO_UPLOAD_DIR'			=> 'Шлях до папки з аватарами не існує або недоступний для запису.',
+	'AVATAR_NO_UPLOAD_PATH'			=> 'Завантаження аватарів увімкнено, але шлях до папки з аватарами не вказано.',
 	'AVATAR_PARTIAL_UPLOAD'	=> 'Файл було завантажено неповністю',
 	'AVATAR_PHP_SIZE_NA'	=> 'Розмір файлу аватара надто великий.<br />Максимально допустимий розмір, визначений PHP в php.ini, неможливо визначити.',
 	'AVATAR_PHP_SIZE_OVERRUN'	=> 'Розмір файлу аватара надто великий. Максимально допустимий розмір %1$d %2$s.<br />Обмеження розміру встановлене в php.ini і не може бути перевищеним.',
@@ -169,6 +171,13 @@ $lang = array_merge($lang, [
 		1	=> '%d символ',
 		2	=> '%d символів',
 	),
+	
+	// Special version to be used when describing ranges e.g. "min x characters and max y characters"
+	'CHARACTERS_XY'			=> array(
+		1	=> '%d символ',
+		2	=> '%d символів',
+	),	
+	
 	'COLLAPSE_VIEW'	=> 'Згорнутий вигляд',
 	'CLOSE_WINDOW'	=> 'Закрити вікно',
 	'CODE'					=> 'Код',
@@ -209,7 +218,7 @@ $lang = array_merge($lang, [
 	'DISPLAY_MESSAGES'	=> 'Показувати теми за',
 	'DISPLAY_POSTS'	=> 'Показувати повідомлення за',
 	'DISPLAY_TOPICS'	=> 'Показувати теми за',
-	'DOMAIN_NO_MX_RECORD_EMAIL'	=> 'Введений домен email не має коректного поштового запису в DNS (MX record).',
+	'DOMAIN_NO_MX_RECORD_EMAIL'	=> 'Домен введеної адреси електронної пошти немає коректних MX записів.',
 	'DOWNLOADED'	=> 'Кількість завантажень',
 	'DOWNLOADING_FILE'	=> 'Завантаження файлу',
 	'DOWNLOAD_COUNTS'		=> array(
@@ -314,7 +323,6 @@ $lang = array_merge($lang, [
 	'GB'                  => 'ГБ',
 	'GIB'                  => 'ГіБ',
 	'GO'						=> 'Перейти',
-	'GOOGLEPLUS'				=> 'Google+',
 	'GOTO_FIRST_POST'      		=> 'До першого повідомлення',
 	'GOTO_LAST_POST'      		=> 'До останнього повідомлення',
 	'GOTO_PAGE'	=> 'На сторінку',
@@ -333,6 +341,7 @@ $lang = array_merge($lang, [
 		2	=> '%d гостей',
 	),
 	'G_ADMINISTRATORS'	=> 'Адміністратори',
+	'G_AI_CRAWLERS'				=> 'ШІ-сканери',
 	'G_BOTS'	=> 'Пошукові боти',
 	'G_GUESTS'	=> 'Гості',
 	'G_REGISTERED'	=> 'Зареєстровані користувачі',
@@ -352,6 +361,7 @@ $lang = array_merge($lang, [
 	'HIDE_ME'	=> 'Приховати моє перебування на форумі цього разу',
 	'HOURS'	=> 'Години',
 	'HOME'	=> 'Головна',
+	'HTTP_HANDLER_NOT_FOUND'		=> 'Операцію неможливо завершити, оскільки розширення cURL PHP та налаштування allow_url_fopen в php.ini вимкнено, і не знайдено жодного іншого обробника HTTP.',
 
 	'ICQ'	=> 'ICQ',
 	'IF'	=> 'якщо',
@@ -414,7 +424,7 @@ $lang = array_merge($lang, [
 	'LOGOUT_USER'	=> 'Вихід [ %s ]',
 	'LOG_ME_IN'	=> 'Запам\'ятати мене',
 
-	'MAIN'					=> 'Головна',
+	'MAIN'					=> 'Головна',   
 	'MARK'	=> 'Позначити',
 	'MARK_ALL'	=> 'Позначити усі',
 	'MARK_ALL_READ'			=> 'Позначити всі прочитаними',
@@ -433,8 +443,9 @@ $lang = array_merge($lang, [
 	'MESSAGE'	=> 'Повідомлення',
 	'MESSAGES'	=> 'Повідомлень',
 	'MESSAGES_COUNT'		=> array(
-		1		=> '%d повідомлення',
-		2		=> '%d повідомлень',
+		0	=> 'Необжена кількість повідомлень',
+		1	=> '%d повідомлення',
+		2	=> '%d повідомлень',
 	),
 	'MESSAGE_BODY'	=> 'Текст повідомлення',
 	'MINUTES'	=> 'Хвилин',
@@ -498,16 +509,18 @@ $lang = array_merge($lang, [
 	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
 	'NOTIFICATION_REASON'				=> '<em>Причина:</em> %1$s.',
 	'NOTIFICATION_REPORT_PM'			=> '<strong>Скарга на приватне повідомлення</strong> від користувача %1$s:',
-	'NOTIFICATION_REPORT_PM_CLOSED'		=> '<strong>Скарга на приватне повідомлення закрита</strong> користувачем %1$s:',
 	'NOTIFICATION_REPORT_POST'			=> '<strong>Скарга на повідомлення</strong> від користувача %1$s:',
-	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Скарга закрита</strong> користувачем %1$s з причини:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Скаргу закрито</strong> користувачем %1$s з причини:',
+	'NOTIFICATION_REPORT_PM_CLOSED'		=> '<strong>Скаргу на приватне повідомлення закрито</strong> by %1$s:',
 	'NOTIFICATION_TOPIC'				=> '<strong>Нова тема</strong> від %1$s:',
 	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Тема схвалена</strong>:',
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Тема відхилена</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> 'Запит на <strong>схвалення теми</strong>, створеної користувачем %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'Тип повідомлення "%s" відсутній у файловій системі.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Очікує активації</strong> новий користувач: "%1$s"',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Очікує активації</strong> деактивований або новий зареєстрований користувач: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Потрібна активація</strong> для деактивованого або щойно зареєстрованого користувача: "%1$s"',
+	'NOTIFICATION_UPDATE_CRITICAL'		=> '<strong>Доступне оновлення phpBB %2$s - Критичне оновлення, яке потребує термінової дії.</strong>: Ваша копія phpbb працює під керуванням версії %1$s. Доступна новіша версія для завантаження, яка містить критичні виправлення безпеки і має бути встановлена ​​як умога швидше.',
+	'NOTIFICATION_UPDATE_MAINTENANCE'	=> '<strong>Доступне оновлення phpBB %2$s</strong>: Ваша копія phpbb працює під керуванням версії %1$s. Доступна новіша версія для завантаження.',
+	'NOTIFICATION_UPDATE_SECURITY'		=> '<strong>Доступне оновлення phpBB %2$s - Оновлення безпеки</strong>: Ваша копія phpbb працює під керуванням версії %1$s. Доступна новіша версія для завантаження, яка містить виправлення безпеки. Ми рекомендуємо оновити вашу копію phpbb, щоб забезпечити більш надійну безпеку та захист.',
 	// Used in conjunction with NOTIFICATION_BOOKMARK and NOTIFICATION_POST.
 	'NOTIFICATION_MANY_OTHERS'			=> 'інших',
 	'NOTIFICATION_X_OTHERS'				=> array(
@@ -515,7 +528,7 @@ $lang = array_merge($lang, [
 		2		=> '%d інших',
 	),
 	'NOTIFY_ADMIN'	=> 'Будь ласка, повідомте адміністратора форуму або вебмайстра.',
-	'NOTIFY_ADMIN_EMAIL'	=> 'Будь ласка повідомте адміністратора форуму або вебмайстра: <a href="mailto:%1$s">%1$s</a>',
+	'NOTIFY_ADMIN_EMAIL'	=> 'Будь ласка, повідомте адміністратора форуму або вебмайстра: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'	=> 'Вам заборонено доступ до цього файлу.',
 	'NO_ACTION'	=> 'Дія невизначена.',
 	'NO_ADMINISTRATORS'	=> 'Адміністратори відсутні.',
@@ -563,7 +576,7 @@ $lang = array_merge($lang, [
 	'NUM_ATTACHMENTS'		=> array(
  		1	=> '%d вкладення',
  		2	=> '%d вкладень',
- 	),
+ 	),   	
 	'NUM_POSTS_IN_QUEUE'      => array(
      	 	0         => 'Немає повідомлень у черзі',      // 0
      	 	1         => '1 повідомлення у черзі',      // 1
@@ -611,7 +624,7 @@ $lang = array_merge($lang, [
 	'POSTS_UNAPPROVED_FORUM'=> 'Як мінімум одне повідомлення в цьому форумі не було перевірено.',
 	'POST_BY_AUTHOR'	=> '',
 	'POST_BY_FOE'	=> 'Автором цього повідомлення є <strong>%1$s</strong>, який внесений до вашого чорного списку.',
-	'POST_DISPLAY'			=> '%1$sПоказати це повідомлення%2$s.',
+	'POST_DISPLAY'			=> 'Показати це повідомлення',
 	'POST_DAY'	=> '%.2f повідомлень за день',
 	'POST_DELETED_ACTION'			=> 'Повідомлення видалено:',
 	'POST_DELETED'			=> 'Це повідомлення було видалено.',
@@ -643,7 +656,7 @@ $lang = array_merge($lang, [
 	'PROFILE'	=> 'Панель керування',
 
 	'QUICK_LINKS'			=> 'Швидкий доступ',
-
+ 
 	'RANK'						=> 'Звання',
 	'READING_FORUM'	=> 'Переглядає повідомлення в %s',
 	'READING_GLOBAL_ANNOUNCE'	=> 'Читає загальне оголошення',
@@ -683,6 +696,8 @@ $lang = array_merge($lang, [
 	'RETURN_TOPIC'	=> '%sПовернутись до теми%s',
 	'RETURN_TO'	=> 'Повернутись до “%s”',
 	'RETURN_TO_INDEX'			=> 'Повернутись до списку форумів',
+	'ROUTE_NOT_FOUND'				=> 'Заданий маршрут “%s” не знайдено.',
+	'ROUTE_INVALID_MISSING_PARAMS'	=> 'Відсутні або недійсні параметри для маршруту “%s”.',
 	'FEED' => 'Канал',
 	'FEED_NEWS' => 'Новини',
 	'FEED_TOPICS_ACTIVE'		=> 'Активні теми',
@@ -926,7 +941,7 @@ $lang = array_merge($lang, [
 	'WRONG_DATA_POST_SD'		=> 'Обрано невірний метод сортування повідомлень.',
 	'WRONG_DATA_POST_SK'		=> 'Обрано невірне поле сортування повідомлень.',
 	'WRONG_DATA_TOPIC_SD'		=> 'Обрано невірний метод сортування тем.',
-	'WRONG_DATA_TOPIC_SK'		=> 'Обрано невірне поле сортування тем.',
+	'WRONG_DATA_TOPIC_SK'		=> 'Обрано невірне поле сортування тем.',	
 	'WROTE'	=> 'писав',
 
 	'YAHOO'				=> 'Yahoo Messenger',
